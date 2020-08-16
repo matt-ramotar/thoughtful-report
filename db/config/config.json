@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "thoughtful_report_bot",
+    "password": "Z36iU@ft&f1u",
+    "database": "thoughtful_report",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "thoughtful_report_bot",
+    "password": "Z36iU@ft&f1u",
+    "database": "thoughtful_report_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
