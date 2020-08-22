@@ -7,9 +7,10 @@ CREATE TABLE "Day" (
 );
 
 CREATE TABLE "Report_Item" (
-  "prompt" text PRIMARY KEY,
-  "promptType" integer,
-  "itemType" integer,
+  "id" serial PRIMARY KEY,
+  "prompt" text,
+  "promptTypeId" integer,
+  "itemTypeId" integer,
   "createdAt" date,
   "updatedAt" date
 );
@@ -27,6 +28,27 @@ CREATE TABLE "Objective" (
   "description" text,
   "createdAt" date,
   "updatedAt" date
+);
+
+CREATE TABLE "Material" (
+  "id" serial PRIMARY KEY,
+  "url" text UNIQUE NOT NULL,
+  "type" integer,
+  "createdAt" date,
+  "updatedAt" date
+);
+
+CREATE TABLE "Material_Type" (
+  "id" serial PRIMARY KEY,
+  "type" text UNIQUE NOT NULL,
+  "createdAt" date,
+  "updatedAt" date
+);
+
+CREATE TABLE "Material_Tag" (
+  "id" serial PRIMARY KEY,
+  "materialId" integer,
+  "tagId" integer
 );
 
 CREATE TABLE "Person" (
@@ -57,7 +79,8 @@ CREATE TABLE "Picture" (
 );
 
 CREATE TABLE "Tag" (
-  "tag" text PRIMARY KEY,
+  "id" serial PRIMARY KEY,
+  "tag" text UNIQUE NOT NULL,
   "createdAt" date,
   "updatedAt" date
 );
@@ -106,6 +129,14 @@ CREATE TABLE "Day_Partner" (
   "updatedAt" date
 );
 
+CREATE TABLE "Day_Material" (
+  "id" serial PRIMARY KEY,
+  "dayId" integer,
+  "materialId" integer,
+  "createdAt" date,
+  "updatedAt" date
+);
+
 CREATE TABLE "Report" (
   "id" serial PRIMARY KEY,
   "responseId" integer,
@@ -132,7 +163,7 @@ CREATE TABLE "Objective_Notecard" (
 CREATE TABLE "Notecard_Tag" (
   "id" serial PRIMARY KEY,
   "notecardId" integer,
-  "tag" text,
+  "tagId" integer,
   "createdAt" date,
   "updatedAt" date
 );
@@ -140,7 +171,7 @@ CREATE TABLE "Notecard_Tag" (
 CREATE TABLE "Objective_Tag" (
   "id" serial PRIMARY KEY,
   "objectiveId" integer,
-  "tag" text,
+  "tagId" integer,
   "createdAt" date,
   "updatedAt" date
 );
@@ -178,7 +209,8 @@ CREATE TABLE "Report_Prompt_Type" (
 );
 
 CREATE TABLE "Report_Item_Type" (
-  "type" text PRIMARY KEY,
+  "id" serial PRIMARY KEY,
+  "type" text UNIQUE NOT NULL,
   "createdAt" date,
   "updatedAt" date
 );
@@ -197,9 +229,15 @@ CREATE TABLE "Pronoun" (
 
 ALTER TABLE "Day" ADD FOREIGN KEY ("reportId") REFERENCES "Report" ("id");
 
-ALTER TABLE "Report_Item" ADD FOREIGN KEY ("promptType") REFERENCES "Report_Prompt_Type" ("id");
+ALTER TABLE "Report_Item" ADD FOREIGN KEY ("promptTypeId") REFERENCES "Report_Prompt_Type" ("id");
 
-ALTER TABLE "Report_Item" ADD FOREIGN KEY ("itemType") REFERENCES "Report_Item_Type" ("type");
+ALTER TABLE "Report_Item" ADD FOREIGN KEY ("itemTypeId") REFERENCES "Report_Item_Type" ("type");
+
+ALTER TABLE "Material" ADD FOREIGN KEY ("type") REFERENCES "Material_Type" ("id");
+
+ALTER TABLE "Material_Tag" ADD FOREIGN KEY ("materialId") REFERENCES "Material" ("id");
+
+ALTER TABLE "Material_Tag" ADD FOREIGN KEY ("tagId") REFERENCES "Tag" ("id");
 
 ALTER TABLE "Person" ADD FOREIGN KEY ("github") REFERENCES "Github_Profile" ("id");
 
@@ -217,9 +255,13 @@ ALTER TABLE "Day_Partner" ADD FOREIGN KEY ("dayId") REFERENCES "Day" ("id");
 
 ALTER TABLE "Day_Partner" ADD FOREIGN KEY ("personId") REFERENCES "Person" ("id");
 
+ALTER TABLE "Day_Material" ADD FOREIGN KEY ("dayId") REFERENCES "Day" ("id");
+
+ALTER TABLE "Day_Material" ADD FOREIGN KEY ("materialId") REFERENCES "Material" ("id");
+
 ALTER TABLE "Report" ADD FOREIGN KEY ("responseId") REFERENCES "Report_Response" ("id");
 
-ALTER TABLE "Report_Response" ADD FOREIGN KEY ("itemId") REFERENCES "Report_Item" ("prompt");
+ALTER TABLE "Report_Response" ADD FOREIGN KEY ("itemId") REFERENCES "Report_Item" ("id");
 
 ALTER TABLE "Report_Response" ADD FOREIGN KEY ("responseId") REFERENCES "Report_Item_Response" ("id");
 
@@ -229,11 +271,11 @@ ALTER TABLE "Objective_Notecard" ADD FOREIGN KEY ("notecardId") REFERENCES "Note
 
 ALTER TABLE "Notecard_Tag" ADD FOREIGN KEY ("notecardId") REFERENCES "Notecard" ("id");
 
-ALTER TABLE "Notecard_Tag" ADD FOREIGN KEY ("tag") REFERENCES "Tag" ("tag");
+ALTER TABLE "Notecard_Tag" ADD FOREIGN KEY ("tagId") REFERENCES "Tag" ("id");
 
 ALTER TABLE "Objective_Tag" ADD FOREIGN KEY ("objectiveId") REFERENCES "Objective" ("id");
 
-ALTER TABLE "Objective_Tag" ADD FOREIGN KEY ("tag") REFERENCES "Tag" ("tag");
+ALTER TABLE "Objective_Tag" ADD FOREIGN KEY ("tagId") REFERENCES "Tag" ("id");
 
 ALTER TABLE "Notecard_Picture" ADD FOREIGN KEY ("notecardId") REFERENCES "Notecard" ("id");
 

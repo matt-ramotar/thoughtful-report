@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://progress.appacademy.io/me/reports/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<script type="text/javascript" src="./monday_files/3139d07607"></script><script src="./monday_files/nr-1173.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3139d07607","applicationID":"6682900","transactionName":"IVxeFkIMCl4EFkkJXU1BVRJfERJBTgoDEw==","queueTime":3,"applicationTime":137,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3139d07607",applicationID:"6682900"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  
+  <title>Progress Tracker</title>
+  <script src="./monday_files/shared_bundle-e08f638f2eea5adf5f02a84d316d6df13288f4f49268f7b7658075f8af665ef4.js"></script>
+  <script src="./monday_files/me_bundle-fd28d414586f4772f7042943dcf5b7d60e2e0c27e9b850d3a7b71999562fa352.js"></script>
+  <link rel="stylesheet" media="screen" href="./monday_files/css">
+  <link rel="stylesheet" media="screen" href="./monday_files/application-24b3a5876dd57d452ddf545eb20ea92ac9962e0fddf71d2de69d157787a2dabf.css">
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="G1SWEjYtmwKHdP+8wgnEEW4ZTqIzzAD9ahmOuVx1QM4oXxhyNjB3slsZCCOP4GV7ToAcnP5GWk6kzmLYNEF0Hw==">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header class="header">
+  <nav class="group">
+    <div class="header-left">
+      <a id="dashboard" href="https://progress.appacademy.io/me" class="student-nav-link logo">Progress Tracker</a>
+
+      <ul class="nav-links group">
+        <li>
+          <a id="assessments" href="https://progress.appacademy.io/me/assessments" class="student-nav-link">Assessments</a>
+        </li>
+
+        <li>
+          <a id="students" href="https://progress.appacademy.io/me/students" class="student-nav-link">Classmates</a>
+        </li>
+
+        <li>
+          <a id="final-projects" href="https://progress.appacademy.io/final_projects" class="student-nav-link">Final Projects</a>
+        </li>
+
+        <li>
+          <a href="http://report.appacademy.io/?city=Online">Anonymous Report</a>
+        </li>
+
+        <li>
+          <a href="https://progress.appacademy.io/me/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-right">
+      <h3 class="menu"></h3>
+
+      <h3 class="student-profile-display" id="open-dropdown">
+        <img class="student-profile-pic" src="https://progress.appacademy.io/me/reports/new">
+
+        <strong class="student-header-name">
+          Matt Ramotar
+        </strong>
+      </h3>
+
+      <ul class="nav-dropdown">
+        <li>
+          <a href="https://progress.appacademy.io/me/badge">Your Badge</a>
+        </li>
+
+        <li>
+          <a href="https://progress.appacademy.io/me/student">Your Stats</a>
+        </li>
+
+        <li>
+          <a href="https://progress.appacademy.io/me/student/edit">Your Profile</a>
+        </li>
+
+        <li>
+          <form action="https://progress.appacademy.io/me/sign_out" method="post">
+                  <input type="hidden" name="authenticity_token" value="G1SWEjYtmwKHdP+8wgnEEW4ZTqIzzAD9ahmOuVx1QM4oXxhyNjB3slsZCCOP4GV7ToAcnP5GWk6kzmLYNEF0Hw==">
+
+            <input type="hidden" name="_method" value="delete">
+            <button>Sign Out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  $(function () {
+    $(".header-right").on("click", function (e) {
+      $(this).closest("nav").toggleClass("open");
+    });
+  });
+</script>
+
+
+    <main class="overflow">
+      <section class="content">
+        <figure class="snackbox"></figure>
+        <form class="standard" action="https://progress.appacademy.io/me/reports" method="post">
+        <input type="hidden" name="authenticity_token" value="G1SWEjYtmwKHdP+8wgnEEW4ZTqIzzAD9ahmOuVx1QM4oXxhyNjB3slsZCCOP4GV7ToAcnP5GWk6kzmLYNEF0Hw==">
+
+
+  <h1>Report for w10d1</h1>
+  <input type="hidden" name="day_id" value="6936">
+
+    <fieldset class="">
+
+    <label>
+      How comfortable are you with today's material?
+    </label>
+
+    <ul class="radio-group">
+        <li>
+          <input id="report_understanding_score_5" type="radio" name="report[understanding_score]" value="5">
+          <label for="report_understanding_score_5">
+            Extremely comfortable. It's easy. Would ace the assessment.
+          </label>
+        </li>
+        <li>
+          <input id="report_understanding_score_4" type="radio" name="report[understanding_score]" value="4">
+          <label for="report_understanding_score_4">
+            Confident I understand all.
+          </label>
+        </li>
+        <li>
+          <input id="report_understanding_score_3" type="radio" name="report[understanding_score]" value="3">
+          <label for="report_understanding_score_3">
+            Have general understanding, but do not yet own it.
+          </label>
+        </li>
+        <li>
+          <input id="report_understanding_score_2" type="radio" name="report[understanding_score]" value="2">
+          <label for="report_understanding_score_2">
+            Struggled with some concepts.
+          </label>
+        </li>
+        <li>
+          <input id="report_understanding_score_1" type="radio" name="report[understanding_score]" value="1">
+          <label for="report_understanding_score_1">
+            Not comfortable at all. In need of more practice and additional explanation.
+          </label>
+        </li>
+    </ul>
+  </fieldset>
+
+  <fieldset class="">
+
+    <label for="feedback_understanding">
+      What parts of today's material do you feel you still need to work on?
+    </label>
+
+    <textarea id="feedback_understanding" name="report[feedback_understanding]"></textarea>
+  </fieldset>
+
+  <fieldset class="">
+
+    <label for="feedback_progress">
+      What did you learn? Thoughts on your progress:
+    </label>
+
+    <textarea id="feedback_progress" name="report[feedback_progress]"></textarea>
+  </fieldset>
+
+
+
+<fieldset>
+  <label for="optional_feedback">
+    Is there anything else you would like to share about the program, culture, or your experiences? (optional)
+  </label>
+
+  <textarea id="optional_feedback" name="report[optional_feedback]"></textarea>
+</fieldset>
+
+
+
+
+  <h2>Instructor Evaluation</h2>
+
+<p class="instructions">
+  All results of this section are visible only to the Head Instructor.
+  Anonymous (<i class="fa fa-user-secret"></i>)
+  feedback may be provided to individuals for their improvement.
+</p>
+
+<fieldset>
+
+  <label for="instructor_rated_staff_github">
+    Whom did you interact with the most today?
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="report-gravatars group">
+
+    <li>
+      <input id="instructor_rated_staff_github_deanlacap" type="radio" name="instructor_evaluation[rated_staff_github]" value="deanlacap">
+
+      <label for="instructor_rated_staff_github_deanlacap">
+        <figure>
+          <img src="./monday_files/0a842d0c128d1393aef6ab444700874b.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Dean
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_ssoonmi" type="radio" name="instructor_evaluation[rated_staff_github]" value="ssoonmi">
+
+      <label for="instructor_rated_staff_github_ssoonmi">
+        <figure>
+          <img src="./monday_files/647502d360c10ed01bff0871db18aa66.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Soon-Mi
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_wongshington" type="radio" name="instructor_evaluation[rated_staff_github]" value="wongshington">
+
+      <label for="instructor_rated_staff_github_wongshington">
+        <figure>
+          <img src="./monday_files/38911a91df3f39a48adf343a18b4344f.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Jesse
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_jm-riley" type="radio" name="instructor_evaluation[rated_staff_github]" value="jm-riley">
+
+      <label for="instructor_rated_staff_github_jm-riley">
+        <figure>
+          <img src="./monday_files/ddb984eb161aa4ab999fef77fa123425.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          John-Michael 
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_martmark" type="radio" name="instructor_evaluation[rated_staff_github]" value="martmark">
+
+      <label for="instructor_rated_staff_github_martmark">
+        <figure>
+          <img src="./monday_files/78e8911d33cd5ca0c51cbc9d8ce22a01.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Martin
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_bamorgan13" type="radio" name="instructor_evaluation[rated_staff_github]" value="bamorgan13">
+
+      <label for="instructor_rated_staff_github_bamorgan13">
+        <figure>
+          <img src="./monday_files/e093487bde67c83dfaab976b34cb5e16.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Bryce
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_briandoyle81" type="radio" name="instructor_evaluation[rated_staff_github]" value="briandoyle81">
+
+      <label for="instructor_rated_staff_github_briandoyle81">
+        <figure>
+          <img src="./monday_files/5b0eeda32a7fd195119ce004cb28e6d0.jpg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Brian
+        </strong>
+        <small>
+          they/them/theirs
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_genagain" type="radio" name="instructor_evaluation[rated_staff_github]" value="genagain">
+
+      <label for="instructor_rated_staff_github_genagain">
+        <figure>
+          <img src="./monday_files/4cd4a6312252058c4d09a58fa1f22937.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Gen
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_alissacrane123" type="radio" name="instructor_evaluation[rated_staff_github]" value="alissacrane123">
+
+      <label for="instructor_rated_staff_github_alissacrane123">
+        <figure>
+          <img src="./monday_files/ca5df2348a974d17d7263ac570081622.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Alissa
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_julienisbet" type="radio" name="instructor_evaluation[rated_staff_github]" value="julienisbet">
+
+      <label for="instructor_rated_staff_github_julienisbet">
+        <figure>
+          <img src="./monday_files/0a2d643ddb08a1904b7155c7c3a1431e.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Julie
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_atopchev" type="radio" name="instructor_evaluation[rated_staff_github]" value="atopchev">
+
+      <label for="instructor_rated_staff_github_atopchev">
+        <figure>
+          <img src="./monday_files/e0f181360c71d02d08a22054adc79bf6.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Angela
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_edherm" type="radio" name="instructor_evaluation[rated_staff_github]" value="edherm">
+
+      <label for="instructor_rated_staff_github_edherm">
+        <figure>
+          <img src="./monday_files/a0bf5ed01ef913d3775a3312f77f1699.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Ed
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_bartdorsey" type="radio" name="instructor_evaluation[rated_staff_github]" value="bartdorsey">
+
+      <label for="instructor_rated_staff_github_bartdorsey">
+        <figure>
+          <img src="./monday_files/c9e307c77acba7624041ed0d0c14b84b.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Bart
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_bakarih" type="radio" name="instructor_evaluation[rated_staff_github]" value="bakarih">
+
+      <label for="instructor_rated_staff_github_bakarih">
+        <figure>
+          <img src="./monday_files/9fdd80e9c5a890d0e04b7e4eb7a000bb.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Bakari
+        </strong>
+        <small>
+          they/them/theirs
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_temporary" type="radio" name="instructor_evaluation[rated_staff_github]" value="temporary">
+
+      <label for="instructor_rated_staff_github_temporary">
+        <figure>
+          <img src="./monday_files/1439d1a5e7d2fd005db4dce6e8a17ab3.jpg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Maggie
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_GordonRBurgess" type="radio" name="instructor_evaluation[rated_staff_github]" value="GordonRBurgess">
+
+      <label for="instructor_rated_staff_github_GordonRBurgess">
+        <figure>
+          <img src="./monday_files/44266819c6a59c8a02ce761fb22563f0.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Gordon 
+        </strong>
+        <small>
+          they/them/theirs
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_jmeyer90" type="radio" name="instructor_evaluation[rated_staff_github]" value="jmeyer90">
+
+      <label for="instructor_rated_staff_github_jmeyer90">
+        <figure>
+          <img src="./monday_files/ad73ef9bc9c19eca5fbbcd7386d12927.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Justin
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_youngcitrus" type="radio" name="instructor_evaluation[rated_staff_github]" value="youngcitrus">
+
+      <label for="instructor_rated_staff_github_youngcitrus">
+        <figure>
+          <img src="./monday_files/ab9290019e4c0bbf87075d3bb2ada79e.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Justin
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_gootieno" type="radio" name="instructor_evaluation[rated_staff_github]" value="gootieno">
+
+      <label for="instructor_rated_staff_github_gootieno">
+        <figure>
+          <img src="./monday_files/3067d8a36d3ea87ca728ce97e04ccc3e.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Geoffrey
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_mylo-james" type="radio" name="instructor_evaluation[rated_staff_github]" value="mylo-james">
+
+      <label for="instructor_rated_staff_github_mylo-james">
+        <figure>
+          <img src="./monday_files/66ad7db46200d8b4a0b4436851274bc4.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Mylo
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_tombetthauser" type="radio" name="instructor_evaluation[rated_staff_github]" value="tombetthauser">
+
+      <label for="instructor_rated_staff_github_tombetthauser">
+        <figure>
+          <img src="./monday_files/9724b77062f9a5ce5bf0f45b7ae3d3d8.jpg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Tom
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_javiermortiz" type="radio" name="instructor_evaluation[rated_staff_github]" value="javiermortiz">
+
+      <label for="instructor_rated_staff_github_javiermortiz">
+        <figure>
+          <img src="./monday_files/c8dd8d35de0f51d83456d7f7088716f5.jpg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Javier
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_jessewarren-aa" type="radio" name="instructor_evaluation[rated_staff_github]" value="jessewarren-aa">
+
+      <label for="instructor_rated_staff_github_jessewarren-aa">
+        <figure>
+          <img src="./monday_files/4042273b7cc1dbfa36533911b2d0edd6.png" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Jesse
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_idbentley" type="radio" name="instructor_evaluation[rated_staff_github]" value="idbentley">
+
+      <label for="instructor_rated_staff_github_idbentley">
+        <figure>
+          <img src="./monday_files/845b8ba77f93ba34c1119aa793cd4221.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Ian
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_corina-s" type="radio" name="instructor_evaluation[rated_staff_github]" value="corina-s">
+
+      <label for="instructor_rated_staff_github_corina-s">
+        <figure>
+          <img src="./monday_files/e26121a03410b8aff2e13393677b3281.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Corina
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_v-campbell" type="radio" name="instructor_evaluation[rated_staff_github]" value="v-campbell">
+
+      <label for="instructor_rated_staff_github_v-campbell">
+        <figure>
+          <img src="./monday_files/f487ff57de27fabaed54c85c7d14d5c7.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Victoria
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_SergeyGridin" type="radio" name="instructor_evaluation[rated_staff_github]" value="SergeyGridin">
+
+      <label for="instructor_rated_staff_github_SergeyGridin">
+        <figure>
+          <img src="./monday_files/85d740afa1cbca88fa1d112b0974308a.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Sergey
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_jballa91" type="radio" name="instructor_evaluation[rated_staff_github]" value="jballa91">
+
+      <label for="instructor_rated_staff_github_jballa91">
+        <figure>
+          <img src="./monday_files/fff176cde410af0a57228dd0db12c9fb.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          James
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_SauceKnight" type="radio" name="instructor_evaluation[rated_staff_github]" value="SauceKnight">
+
+      <label for="instructor_rated_staff_github_SauceKnight">
+        <figure>
+          <img src="./monday_files/98ee4c2093b5651f930250434a37e31d.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Alfredo
+        </strong>
+        <small>
+          he/him/his
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_junnac" type="radio" name="instructor_evaluation[rated_staff_github]" value="junnac">
+
+      <label for="instructor_rated_staff_github_junnac">
+        <figure>
+          <img src="./monday_files/4dbe6cf29ceff3b0b90207b0f615fac8.jpg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Joanna
+        </strong>
+        <small>
+          they/them/theirs
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_Aderyn1121" type="radio" name="instructor_evaluation[rated_staff_github]" value="Aderyn1121">
+
+      <label for="instructor_rated_staff_github_Aderyn1121">
+        <figure>
+          <img src="./monday_files/b412217413c2c562cf220687e44baabc.jpeg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Emily
+        </strong>
+        <small>
+          she/her/hers
+        </small>
+
+      </label>
+    </li>
+
+
+    <li>
+      <input id="instructor_rated_staff_github_br80" type="radio" name="instructor_evaluation[rated_staff_github]" value="br80">
+
+      <label for="instructor_rated_staff_github_br80">
+        <figure>
+          <img src="./monday_files/3abf9e2906b6b71139055995ea2b0ce6.jpg" alt="Gravatar" width="300" height="300">
+        </figure>
+
+        <strong>
+          Brady
+        </strong>
+        <small>
+          they/them/theirs
+        </small>
+
+      </label>
+    </li>
+
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    How would you rate that staff member's performance?
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="instructor_score_5" type="radio" name="instructor_evaluation[score]" value="5">
+        <label for="instructor_score_5">
+          Excellent
+        </label>
+      </li>
+      <li>
+        <input id="instructor_score_4" type="radio" name="instructor_evaluation[score]" value="4">
+        <label for="instructor_score_4">
+          Good
+        </label>
+      </li>
+      <li>
+        <input id="instructor_score_3" type="radio" name="instructor_evaluation[score]" value="3">
+        <label for="instructor_score_3">
+          Mediocre
+        </label>
+      </li>
+      <li>
+        <input id="instructor_score_2" type="radio" name="instructor_evaluation[score]" value="2">
+        <label for="instructor_score_2">
+          Bad
+        </label>
+      </li>
+      <li>
+        <input id="instructor_score_1" type="radio" name="instructor_evaluation[score]" value="1">
+        <label for="instructor_score_1">
+          Terrible
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <label for="instructor_kudos">
+    What was something that they did well?
+    <i class="fa fa-user-secret"></i>
+  </label>
+  <textarea id="instructor_kudos" name="instructor_evaluation[kudos]" placeholder="Please use the instructor&#39;s preferred pronouns."></textarea>
+</fieldset>
+
+<fieldset>
+  <label for="instructor_feedback">
+    Is there anything that they could improve? (optional)
+    <i class="fa fa-user-secret"></i>
+  </label>
+  <textarea id="instructor_feedback" name="instructor_evaluation[feedback]" placeholder="Please use the instructor&#39;s preferred pronouns."></textarea>
+</fieldset>
+
+
+
+
+    <h2>Weekly Feedback Survey</h2>
+
+<p class="instructions">
+  Please provide feedback on this week's instruction. Responses are completely 
+  anonymous (<i class="fa fa-user-secret"></i>), so please answer honestly - 
+  your feedback will help to improve the student experience.
+</p>
+
+<fieldset class="">
+
+  <label>
+    The pace of class this week has been:
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="pace_score_3" type="radio" name="weekly_feedback[pace_score]" value="Too Fast">
+        <label for="pace_score_3">
+          Too Fast
+        </label>
+      </li>
+      <li>
+        <input id="pace_score_2" type="radio" name="weekly_feedback[pace_score]" value="Just Right">
+        <label for="pace_score_2">
+          Just Right
+        </label>
+      </li>
+      <li>
+        <input id="pace_score_1" type="radio" name="weekly_feedback[pace_score]" value="Too Slow">
+        <label for="pace_score_1">
+          Too Slow
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    This week’s lecture material was presented clearly and effectively.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="lecture_score_4" type="radio" name="weekly_feedback[lecture_score]" value="Strongly Agree">
+        <label for="lecture_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="lecture_score_3" type="radio" name="weekly_feedback[lecture_score]" value="Agree">
+        <label for="lecture_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="lecture_score_2" type="radio" name="weekly_feedback[lecture_score]" value="Disagree">
+        <label for="lecture_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="lecture_score_1" type="radio" name="weekly_feedback[lecture_score]" value="Strongly Disagree">
+        <label for="lecture_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    The coding tasks aided in my learning.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="coding_tasks_score_4" type="radio" name="weekly_feedback[coding_tasks_score]" value="Strongly Agree">
+        <label for="coding_tasks_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="coding_tasks_score_3" type="radio" name="weekly_feedback[coding_tasks_score]" value="Agree">
+        <label for="coding_tasks_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="coding_tasks_score_2" type="radio" name="weekly_feedback[coding_tasks_score]" value="Disagree">
+        <label for="coding_tasks_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="coding_tasks_score_1" type="radio" name="weekly_feedback[coding_tasks_score]" value="Strongly Disagree">
+        <label for="coding_tasks_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+  <fieldset class="">
+
+    <label>
+      The Q&amp;A sessions were effective.
+      <i class="fa fa-user-secret"></i>
+    </label>
+
+    <ul class="radio-group">
+        <li>
+          <input id="q_and_a_score_4" type="radio" name="weekly_feedback[q_and_a_score]" value="Strongly Agree">
+          <label for="q_and_a_score_4">
+            Strongly Agree
+          </label>
+        </li>
+        <li>
+          <input id="q_and_a_score_3" type="radio" name="weekly_feedback[q_and_a_score]" value="Agree">
+          <label for="q_and_a_score_3">
+            Agree
+          </label>
+        </li>
+        <li>
+          <input id="q_and_a_score_2" type="radio" name="weekly_feedback[q_and_a_score]" value="Disagree">
+          <label for="q_and_a_score_2">
+            Disagree
+          </label>
+        </li>
+        <li>
+          <input id="q_and_a_score_1" type="radio" name="weekly_feedback[q_and_a_score]" value="Strongly Disagree">
+          <label for="q_and_a_score_1">
+            Strongly Disagree
+          </label>
+        </li>
+    </ul>
+  </fieldset>
+
+<fieldset class="">
+
+  <label>
+    I am comfortable asking questions when I have them.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="comfortable_asking_questions_score_4" type="radio" name="weekly_feedback[comfortable_asking_questions_score]" value="Strongly Agree">
+        <label for="comfortable_asking_questions_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="comfortable_asking_questions_score_3" type="radio" name="weekly_feedback[comfortable_asking_questions_score]" value="Agree">
+        <label for="comfortable_asking_questions_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="comfortable_asking_questions_score_2" type="radio" name="weekly_feedback[comfortable_asking_questions_score]" value="Disagree">
+        <label for="comfortable_asking_questions_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="comfortable_asking_questions_score_1" type="radio" name="weekly_feedback[comfortable_asking_questions_score]" value="Strongly Disagree">
+        <label for="comfortable_asking_questions_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    I receive useful help when I ask questions.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="useful_question_help_score_4" type="radio" name="weekly_feedback[useful_question_help_score]" value="Strongly Agree">
+        <label for="useful_question_help_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="useful_question_help_score_3" type="radio" name="weekly_feedback[useful_question_help_score]" value="Agree">
+        <label for="useful_question_help_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="useful_question_help_score_2" type="radio" name="weekly_feedback[useful_question_help_score]" value="Disagree">
+        <label for="useful_question_help_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="useful_question_help_score_1" type="radio" name="weekly_feedback[useful_question_help_score]" value="Strongly Disagree">
+        <label for="useful_question_help_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <label for="weekly_feedback_helpful_feedback">
+    Describe the type of feedback that would be most helpful to you. (Optional)
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <textarea id="weekly_feedback_helpful_feedback" name="weekly_feedback[helpful_feedback]"></textarea>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    I am well engaged with what is going on.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="engagement_score_4" type="radio" name="weekly_feedback[engagement_score]" value="Strongly Agree">
+        <label for="engagement_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="engagement_score_3" type="radio" name="weekly_feedback[engagement_score]" value="Agree">
+        <label for="engagement_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="engagement_score_2" type="radio" name="weekly_feedback[engagement_score]" value="Disagree">
+        <label for="engagement_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="engagement_score_1" type="radio" name="weekly_feedback[engagement_score]" value="Strongly Disagree">
+        <label for="engagement_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    I have been given adequate opportunity to demonstrate what I have been learning in class.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="demonstrate_learning_score_4" type="radio" name="weekly_feedback[demonstrate_learning_score]" value="Strongly Agree">
+        <label for="demonstrate_learning_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="demonstrate_learning_score_3" type="radio" name="weekly_feedback[demonstrate_learning_score]" value="Agree">
+        <label for="demonstrate_learning_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="demonstrate_learning_score_2" type="radio" name="weekly_feedback[demonstrate_learning_score]" value="Disagree">
+        <label for="demonstrate_learning_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="demonstrate_learning_score_1" type="radio" name="weekly_feedback[demonstrate_learning_score]" value="Strongly Disagree">
+        <label for="demonstrate_learning_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    This course has been valuable in helping me enhance existing skills and develop new skills.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="skill_development_score_4" type="radio" name="weekly_feedback[skill_development_score]" value="Strongly Agree">
+        <label for="skill_development_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="skill_development_score_3" type="radio" name="weekly_feedback[skill_development_score]" value="Agree">
+        <label for="skill_development_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="skill_development_score_2" type="radio" name="weekly_feedback[skill_development_score]" value="Disagree">
+        <label for="skill_development_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="skill_development_score_1" type="radio" name="weekly_feedback[skill_development_score]" value="Strongly Disagree">
+        <label for="skill_development_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    I have confidence in the instructors' subject matter expertise.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="instructor_knowledge_score_4" type="radio" name="weekly_feedback[instructor_knowledge_score]" value="Strongly Agree">
+        <label for="instructor_knowledge_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="instructor_knowledge_score_3" type="radio" name="weekly_feedback[instructor_knowledge_score]" value="Agree">
+        <label for="instructor_knowledge_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="instructor_knowledge_score_2" type="radio" name="weekly_feedback[instructor_knowledge_score]" value="Disagree">
+        <label for="instructor_knowledge_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="instructor_knowledge_score_1" type="radio" name="weekly_feedback[instructor_knowledge_score]" value="Strongly Disagree">
+        <label for="instructor_knowledge_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    I have confidence in the instructors' ability to teach effectively.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="radio-group">
+      <li>
+        <input id="instructor_teaching_score_4" type="radio" name="weekly_feedback[instructor_teaching_score]" value="Strongly Agree">
+        <label for="instructor_teaching_score_4">
+          Strongly Agree
+        </label>
+      </li>
+      <li>
+        <input id="instructor_teaching_score_3" type="radio" name="weekly_feedback[instructor_teaching_score]" value="Agree">
+        <label for="instructor_teaching_score_3">
+          Agree
+        </label>
+      </li>
+      <li>
+        <input id="instructor_teaching_score_2" type="radio" name="weekly_feedback[instructor_teaching_score]" value="Disagree">
+        <label for="instructor_teaching_score_2">
+          Disagree
+        </label>
+      </li>
+      <li>
+        <input id="instructor_teaching_score_1" type="radio" name="weekly_feedback[instructor_teaching_score]" value="Strongly Disagree">
+        <label for="instructor_teaching_score_1">
+          Strongly Disagree
+        </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    On a scale of 1-5, please rate your stress level this week.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="flat-radio-header">
+    <li>Low Stress</li>
+    <li>High Stress</li>
+  </ul>
+
+  <ul class="flat-radio">
+      <li>
+        <input id="weekly_feedback_stress_score_1" type="radio" name="weekly_feedback[stress_score]" value="1">
+
+          <label for="weekly_feedback_stress_score_1">
+            1
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_stress_score_2" type="radio" name="weekly_feedback[stress_score]" value="2">
+
+          <label for="weekly_feedback_stress_score_2">
+            2
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_stress_score_3" type="radio" name="weekly_feedback[stress_score]" value="3">
+
+          <label for="weekly_feedback_stress_score_3">
+            3
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_stress_score_4" type="radio" name="weekly_feedback[stress_score]" value="4">
+
+          <label for="weekly_feedback_stress_score_4">
+            4
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_stress_score_5" type="radio" name="weekly_feedback[stress_score]" value="5">
+
+          <label for="weekly_feedback_stress_score_5">
+            5
+          </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+
+  <label>
+    On a scale of 1-5, please rate your level of enjoyment of this course this week.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <ul class="flat-radio-header">
+    <li>Low Enjoyment</li>
+    <li><span class="translation_missing" title="translation missing: en.activerecord.attributes.weekly_feedback.enjoyment_level_high">Enjoyment Level High</span></li>
+  </ul>
+
+  <ul class="flat-radio">
+      <li>
+        <input id="weekly_feedback_enjoyment_score_1" type="radio" name="weekly_feedback[enjoyment_score]" value="1">
+
+          <label for="weekly_feedback_enjoyment_score_1">
+            1
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_enjoyment_score_2" type="radio" name="weekly_feedback[enjoyment_score]" value="2">
+
+          <label for="weekly_feedback_enjoyment_score_2">
+            2
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_enjoyment_score_3" type="radio" name="weekly_feedback[enjoyment_score]" value="3">
+
+          <label for="weekly_feedback_enjoyment_score_3">
+            3
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_enjoyment_score_4" type="radio" name="weekly_feedback[enjoyment_score]" value="4">
+
+          <label for="weekly_feedback_enjoyment_score_4">
+            4
+          </label>
+      </li>
+      <li>
+        <input id="weekly_feedback_enjoyment_score_5" type="radio" name="weekly_feedback[enjoyment_score]" value="5">
+
+          <label for="weekly_feedback_enjoyment_score_5">
+            5
+          </label>
+      </li>
+  </ul>
+</fieldset>
+
+<fieldset class="">
+  
+  <label for="weekly_feedback_additional_comments">
+    Please provide any additional comments or context regarding your experience.
+    <i class="fa fa-user-secret"></i>
+  </label>
+
+  <textarea id="weekly_feedback_additional_comments" name="weekly_feedback[additional_comments]"></textarea>
+</fieldset>
+
+
+  <button id="submit">Submit</button>
+</form>
+
+      </section>
+    </main>
+
+    <div class="modal">
+      <div class="cover"></div>
+      <div class="root"></div>
+    </div>
+
+    <script>
+    $(function () {
+      var page = "";
+      if (page) $("#" + page).addClass("selected");
+
+    });
+    </script>
+
+
+</body></html>
